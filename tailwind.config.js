@@ -3,9 +3,6 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
-      fontFamily: {
-        'spartan': ["League Spartan", "sans-serif"],
-      },
       height: {
         'header': "6rem"
       },
