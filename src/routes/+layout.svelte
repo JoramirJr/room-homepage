@@ -2,7 +2,7 @@
   import "../app.css";
 </script>
 
-<header class="fixed w-full h-header bg-transparent flex items-center pt-[1rem] px-[5.5vw]">
+<header class="z-[1] fixed w-full h-header bg-transparent flex items-center pt-[1rem] px-[5.5vw]">
   <button>
     <img
       src="/icon-hamburger.svg"
