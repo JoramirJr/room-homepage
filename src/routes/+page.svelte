@@ -1,7 +1,7 @@
 <header
   class="absolute left-0 top-0 w-full h-header bg-transparent flex items-center pt-[1rem] px-[5.5vw]"
 >
-  <button>
+  <button class="sm:hidden">
     <img
       src="/icon-hamburger.svg"
       alt="Menu Hamburger Icon"
@@ -10,14 +10,20 @@
     />
   </button>
   <h1
-    class="w-full text-center align-text-top text-[1.75rem] font-spartan font-medium"
+    class="w-full text-center align-text-top text-[1.75rem] font-spartan font-medium sm:w-fit sm:text-left"
   >
     room
   </h1>
+  <nav class="min-[0px]:hidden sm:block sm:flex sm:ml-[3rem] sm:gap-[1.5rem] sm:text-[.8rem]" >
+    <a href="/" aria-label="home page link">Home</a>
+    <a href="/shop" aria-label="shop page link">Shop</a>
+    <a href="/about" aria-label="about page link">About</a>
+    <a href="/content" aria-label="content page link">Content</a>
+  </nav>
 </header>
-<main class="h-screen w-screen">
-  <section class="flex flex-wrap *:w-screen">
-    <div class="h-[22rem] bg-light-furniture flex items-end justify-end">
+<main class="h-fit w-screen">
+  <section class="flex flex-col sm:flex-row">
+    <div class="min-h-[22rem] bg-light-furniture-mobile bg-cover flex items-end justify-end w-screen sm:min-w-[60vw] sm:h-[75vh] sm:bg-light-furniture-desktop">
       <div
         class="w-fit right-0 bottom-0 flex gap-0 *:bg-black *:py-[1rem] *:px-[1.25rem]"
       >
@@ -38,21 +44,21 @@
       </div>
     </div>
     <div
-      class="grid place-items-center h-[24rem] px-[1.75rem] box-content my-[3rem]"
+      class="flex flex-col justify-center gap-[1.25rem] h-fit px-[1.75rem] box-content my-[3rem] sm:w-full sm:px-[3rem] sm:py-[1rem] "
     >
       <h2
-        class="text-black text-[2.5rem] leading-[2.25rem] font-semibold tracking-tight"
+        class="text-black text-[2rem] leading-[2.25rem] font-semibold tracking-tight"
       >
         Discover innovative ways to decorate
       </h2>
-      <span class="text-gray-400 leading-[1.25rem]">
+      <span class="text-gray-400 leading-[1rem]">
         We provide unmatched quality, comfort, and style for property owners
         across the country. Our experts combine form and function in bringing
         your vision to life. Create a room in your own style with our collection
         and make your property a reflection of you and what you love.
       </span>
       <button
-        class="flex text-[1rem] items-center gap-[1rem] text-black text-[1rem] tracking-[1rem] w-full"
+        class="flex text-[1rem] py-[1rem] items-center gap-[1rem] text-black tracking-[.5rem] w-full sm:text-[.75rem] sm:text-bold"
       >
         SHOP NOW
         <img
