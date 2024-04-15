@@ -14,7 +14,9 @@
   >
     room
   </h1>
-  <nav class="min-[0px]:hidden sm:block sm:flex sm:ml-[3rem] sm:gap-[1.5rem] sm:text-[.8rem]" >
+  <nav
+    class="min-[0px]:hidden sm:block sm:flex sm:ml-[3rem] sm:gap-[1.5rem] sm:text-[.8rem]"
+  >
     <a href="/" aria-label="home page link">Home</a>
     <a href="/shop" aria-label="shop page link">Shop</a>
     <a href="/about" aria-label="about page link">About</a>
@@ -23,20 +25,22 @@
 </header>
 <main class="h-fit w-screen">
   <section class="flex flex-col sm:flex-row">
-    <div class="min-h-[22rem] bg-light-furniture-mobile bg-cover flex items-end justify-end w-screen sm:min-w-[60vw] sm:h-[75vh] sm:bg-light-furniture-desktop">
+    <div
+      class="min-h-[22rem] bg-light-furniture-mobile bg-cover flex items-end justify-end w-screen sm:min-w-[60vw] sm:h-[75vh] sm:bg-light-furniture-desktop"
+    >
       <div
         class="w-fit right-0 bottom-0 flex gap-0 *:bg-black *:py-[1rem] *:px-[1.25rem]"
       >
         <button aria-label="slider return">
           <img
-            class="w-[.6rem]"
+            class="w-[.6rem] sm:w-[1.25rem] sm:h-[1.5rem]"
             src="icon-angle-left.svg"
             alt="slider return icon"
           />
         </button>
         <button aria-label="slider forward">
           <img
-            class="w-[.6rem]"
+            class="w-[.6rem] sm:w-[1.25rem] sm:h-[1.5rem]"
             src="icon-angle-right.svg"
             alt="slider forward icon"
           />
@@ -44,14 +48,14 @@
       </div>
     </div>
     <div
-      class="flex flex-col justify-center gap-[1.25rem] h-fit px-[1.75rem] box-content my-[3rem] sm:w-full sm:px-[3rem] sm:py-[1rem] "
+      class="flex flex-col justify-center gap-[1.25rem] h-fit px-[1.75rem] box-content mt-[5rem] sm:w-full sm:px-[3rem] sm:py-[1rem]"
     >
       <h2
         class="text-black text-[2rem] leading-[2.25rem] font-semibold tracking-tight"
       >
         Discover innovative ways to decorate
       </h2>
-      <span class="text-gray-400 leading-[1rem]">
+      <span class="text-gray-400 leading-[1rem] text-[.85rem]">
         We provide unmatched quality, comfort, and style for property owners
         across the country. Our experts combine form and function in bringing
         your vision to life. Create a room in your own style with our collection
@@ -69,15 +73,21 @@
       </button>
     </div>
   </section>
-  <section>
-    <img src="image-about-dark.jpg" alt="" />
-    <div class="h-fit px-[2rem] py-[2rem] box-content">
+  <section class="sm:flex w-screen sm:h-fit">
+    <img
+      class="sm:max-w-[30vw] sm:max-h-[30vh] sm:aspect-video"
+      src="image-about-dark.jpg"
+      alt=""
+    />
+    <div class="h-fit py-[2rem] px-[1rem] box-content sm:box-border sm:max-h-[30vh] sm:max-w-[60vw]">
       <h2
-        class="text-black text-[.9rem] leading-[3.25rem] font-bold tracking-[.4rem]"
+        class="text-black text-[.9rem] leading-[3.25rem] font-bold tracking-[.4rem] sm:w-full leading-0"
       >
         ABOUT OUR FURNITURE
       </h2>
-      <span class="text-gray-400 leading-[1.25rem]">
+      <span
+        class="text-gray-400 leading-[1.25rem] sm:text-[.85rem] sm:leading-[1rem] sm:w-fit"
+      >
         Our multifunctional collection blends design and function to suit your
         individual taste. Make each room unique, or pick a cohesive theme that
         best express your interests and what inspires you. Find the furniture
@@ -86,6 +96,10 @@
         space.
       </span>
     </div>
-    <img src="image-about-light.jpg" alt="" />
+    <img
+      class="sm:max-w-[30vw] sm:max-h-[30vh] sm:aspect-video"
+      src="image-about-light.jpg"
+      alt=""
+    />
   </section>
 </main>
