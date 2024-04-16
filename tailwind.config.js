@@ -7,8 +7,12 @@ export default {
         'header': "6rem"
       },
       backgroundImage: {
-        'light-furniture-mobile': "url('/mobile-image-hero-1.jpg')",
-        'light-furniture-desktop': "url('/desktop-image-hero-1.jpg')",
+        'slider-item-mobile-1': "url('/mobile-image-hero-1.jpg')",
+        'slider-item-desktop-1': "url('/desktop-image-hero-1.jpg')",
+        'slider-item-mobile-2': "url('/mobile-image-hero-2.jpg')",
+        'slider-item-desktop-2': "url('/desktop-image-hero-2.jpg')",
+        'slider-item-mobile-3': "url('/mobile-image-hero-3.jpg')",
+        'slider-item-desktop-3': "url('/desktop-image-hero-3.jpg')",
       }
     }
   },

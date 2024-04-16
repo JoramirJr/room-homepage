@@ -1,19 +1,43 @@
+<script>
+  /**
+   * @type {1|2|3}
+   */
+  let slider_item = 1;
+
+  /**
+   * @param {'back'|"onward"} dir
+   */
+  function handle_slider(dir) {
+    if (dir === "back" && slider_item > 1) {
+      slider_item--;
+    } else if (dir === "onward" && slider_item <= 2) {
+      slider_item++;
+    }
+  }
+</script>
+
 <main class="h-fit w-screen">
   <section class="flex flex-col sm:flex-row">
     <div
-      class="min-h-[22rem] bg-light-furniture-mobile bg-cover flex items-end justify-end w-screen sm:min-w-[60vw] sm:h-[70vh] sm:bg-light-furniture-desktop"
+      class={`min-h-[22rem] bg-slider-item-mobile-${slider_item} bg-cover flex items-end justify-end w-screen sm:min-w-[60vw] sm:h-[70vh] sm:bg-slider-item-desktop-${slider_item}`}
     >
       <div
         class="w-fit right-0 bottom-0 flex gap-0 *:bg-black *:py-[1rem] *:px-[1.25rem] sm:hidden"
       >
-        <button aria-label="slider return">
+        <button
+          on:click={() => handle_slider("back")}
+          aria-label="slider return"
+        >
           <img
             class="w-full h-[1rem]"
             src="icon-angle-left.svg"
             alt="slider return icon"
           />
         </button>
-        <button aria-label="slider forward">
+        <button
+          on:click={() => handle_slider("onward")}
+          aria-label="slider forward"
+        >
           <img
             class="w-full h-[1rem]"
             src="icon-angle-right.svg"
@@ -30,7 +54,9 @@
       >
         Discover innovative ways to decorate
       </h2>
-      <span class="text-gray-400 leading-[1rem] text-[.85rem] mb-[1.5rem] sm:m-0">
+      <span
+        class="text-gray-400 leading-[1rem] text-[.85rem] mb-[1.5rem] sm:m-0"
+      >
         We provide unmatched quality, comfort, and style for property owners
         across the country. Our experts combine form and function in bringing
         your vision to life. Create a room in your own style with our collection
@@ -49,15 +75,22 @@
       <div
         class="absolute w-fit left-0 bottom-0 flex gap-0 *:bg-black *:py-[1rem] *:px-[1.25rem] hidden sm:block"
       >
-        <button aria-label="slider return">
+        <button
+          on:click={() => handle_slider("back")}
+          aria-label="slider return"
+        >
           <img
-            class="w-[.6rem] sm:w-[1.25rem] sm:h-[1rem] sm:w-[.75rem]"
+            class="w-full h-[1rem]"
             src="icon-angle-left.svg"
             alt="slider return icon"
           />
-        </button><button aria-label="slider forward">
+        </button>
+        <button
+          on:click={() => handle_slider("onward")}
+          aria-label="slider forward"
+        >
           <img
-            class="w-[.6rem] sm:w-[1.25rem] sm:h-[1rem] sm:w-[.75rem]"
+            class="w-full h-[1rem]"
             src="icon-angle-right.svg"
             alt="slider forward icon"
           />
