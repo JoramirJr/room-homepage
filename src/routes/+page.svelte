@@ -1,28 +1,3 @@
-<header
-  class="absolute left-0 top-0 w-full h-header bg-transparent flex items-center pt-[1rem] px-[5.5vw]"
->
-  <button class="sm:hidden">
-    <img
-      src="/icon-hamburger.svg"
-      alt="Menu Hamburger Icon"
-      aria-label="Mobile Menu Button"
-      class="w-[1.25rem]"
-    />
-  </button>
-  <h1
-    class="w-full text-center align-text-top text-[1.75rem] font-spartan font-medium sm:w-fit sm:text-left"
-  >
-    room
-  </h1>
-  <nav
-    class="min-[0px]:hidden sm:block sm:flex sm:ml-[3rem] sm:gap-[1.5rem] sm:text-[.8rem]"
-  >
-    <a href="/" aria-label="home page link">Home</a>
-    <a href="/shop" aria-label="shop page link">Shop</a>
-    <a href="/about" aria-label="about page link">About</a>
-    <a href="/content" aria-label="content page link">Content</a>
-  </nav>
-</header>
 <main class="h-fit w-screen">
   <section class="flex flex-col sm:flex-row">
     <div
