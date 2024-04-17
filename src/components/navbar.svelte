@@ -31,7 +31,7 @@
 
 {#if menu_type === "desktop"}
   <nav
-    class="min-[0px]:hidden sm:block sm:flex sm:ml-[3rem] sm:gap-[1.5rem] sm:text-[.8rem] px-[1.5rem]"
+    class="min-[0px]:hidden sm:block sm:flex sm:ml-[7rem] sm:gap-[1.5rem] sm:text-[.8rem] px-[1.5rem]"
   >
     <a href="/" aria-label="home page link">Home</a>
     <a href="/shop" aria-label="shop page link">Shop</a>
