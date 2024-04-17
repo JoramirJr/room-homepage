@@ -1,4 +1,6 @@
 <script>
+  import clsx from "clsx";
+
   /**
    * @type {1|2|3}
    */
@@ -13,88 +15,111 @@
     } else if (dir === "onward" && slider_item <= 2) {
       slider_item++;
     }
+    console.log(slider_item);
   }
 </script>
 
 <main class="h-fit w-screen">
   <section class="flex flex-col sm:flex-row">
-    <div
-      class={`min-h-[22rem] bg-slider-item-mobile-${slider_item} bg-cover flex items-end justify-end w-screen sm:min-w-[60vw] sm:h-[70vh] sm:bg-slider-item-desktop-${slider_item}`}
-    >
+    <div>
       <div
-        class="w-fit right-0 bottom-0 flex gap-0 *:bg-black *:py-[1rem] *:px-[1.25rem] sm:hidden"
+        class="slider min-h-[22rem] flex items-end justify-end w-screen sm:min-w-[60vw] sm:h-[70vh]"
       >
-        <button
-          on:click={() => handle_slider("back")}
-          aria-label="slider return"
+        {#if slider_item === 1}
+          <div
+            class="slide h-full w-full bg-cover bg-slider-item-mobile-1 sm:bg-slider-item-desktop-1 delay-0"
+          ></div>
+        {:else if slider_item === 2}
+          <div
+            class="slide h-full w-full bg-cover bg-slider-item-mobile-2 sm:bg-slider-item-desktop-2 delay-[-2s]"
+          ></div>
+        {:else}
+          <div
+            class="slide h-full w-full bg-cover bg-slider-item-mobile-3 sm:bg-slider-item-desktop-3 delay-[-4s]"
+          ></div>
+        {/if}
+        <div
+          class="w-fit right-0 bottom-0 flex gap-0 *:py-[1rem] *:px-[1.25rem] sm:hidden"
         >
-          <img
-            class="w-full h-[1rem]"
-            src="icon-angle-left.svg"
-            alt="slider return icon"
-          />
-        </button>
-        <button
-          on:click={() => handle_slider("onward")}
-          aria-label="slider forward"
-        >
-          <img
-            class="w-full h-[1rem]"
-            src="icon-angle-right.svg"
-            alt="slider forward icon"
-          />
-        </button>
+          <button
+            on:click={() => handle_slider("back")}
+            aria-label="slider return"
+            class={clsx("bg-black", {
+              "bg-gray-500": slider_item === 1,
+            })}
+          >
+            <img
+              class="w-full h-[1rem]"
+              src="icon-angle-left.svg"
+              alt="slider return icon"
+            />
+          </button>
+          <button
+            on:click={() => handle_slider("onward")}
+            aria-label="slider forward"
+            class={clsx("bg-black", {
+              "bg-gray-500": slider_item === 3,
+            })}
+          >
+            <img
+              class="w-full h-[1rem]"
+              src="icon-angle-right.svg"
+              alt="slider forward icon"
+            />
+          </button>
+        </div>
       </div>
-    </div>
-    <div
-      class="h-fit px-[1.75rem] box-content my-[4rem] sm:w-full sm:px-[3rem] sm:py-[1rem] sm:m-0 sm:h-[70vh] sm:box-border sm:relative sm:flex sm:flex-col sm:justify-center"
-    >
-      <h2
-        class="text-black text-[2.5rem] leading-[2.25rem] font-semibold tracking-tight mb-[1.25rem]"
-      >
-        Discover innovative ways to decorate
-      </h2>
-      <span
-        class="text-gray-400 leading-[1rem] text-[.85rem] mb-[1.5rem] sm:m-0"
-      >
-        We provide unmatched quality, comfort, and style for property owners
-        across the country. Our experts combine form and function in bringing
-        your vision to life. Create a room in your own style with our collection
-        and make your property a reflection of you and what you love.
-      </span>
-      <button
-        class="flex text-[1rem] mt-[1.25rem] py-[1rem] items-center gap-[1rem] text-black tracking-[.5rem] w-full sm:text-[.75rem] sm:text-bold sm:m-0"
-      >
-        SHOP NOW
-        <img
-          class="h-[.75rem]"
-          src="icon-arrow.svg"
-          alt="shop now arrow icon"
-        />
-      </button>
       <div
-        class="absolute w-fit left-0 bottom-0 flex gap-0 *:bg-black *:py-[1rem] *:px-[1.25rem] hidden sm:block"
+        class="h-fit px-[1.75rem] box-content my-[4rem] sm:w-full sm:px-[3rem] sm:py-[1rem] sm:m-0 sm:h-[70vh] sm:box-border sm:relative sm:flex sm:flex-col sm:justify-center"
       >
-        <button
-          on:click={() => handle_slider("back")}
-          aria-label="slider return"
+        <h2
+          class="text-black text-[2.5rem] leading-[2.25rem] font-semibold tracking-tight mb-[1.25rem]"
         >
+          Discover innovative ways to decorate
+        </h2>
+        <span
+          class="text-gray-400 leading-[1rem] text-[.85rem] mb-[1.5rem] sm:m-0"
+        >
+          We provide unmatched quality, comfort, and style for property owners
+          across the country. Our experts combine form and function in bringing
+          your vision to life. Create a room in your own style with our
+          collection and make your property a reflection of you and what you
+          love.
+        </span>
+        <button
+          class="flex text-[1rem] mt-[1.25rem] py-[1rem] items-center gap-[1rem] text-black tracking-[.5rem] w-full sm:text-[.75rem] sm:text-bold sm:m-0"
+        >
+          SHOP NOW
           <img
-            class="w-full h-[1rem]"
-            src="icon-angle-left.svg"
-            alt="slider return icon"
+            class="h-[.75rem]"
+            src="icon-arrow.svg"
+            alt="shop now arrow icon"
           />
         </button>
-        <button
-          on:click={() => handle_slider("onward")}
-          aria-label="slider forward"
+        <div
+          class="absolute w-fit left-0 bottom-0 flex gap-0 *:bg-black *:py-[1rem] *:px-[1.25rem] hidden sm:block"
         >
-          <img
-            class="w-full h-[1rem]"
-            src="icon-angle-right.svg"
-            alt="slider forward icon"
-          />
-        </button>
+          <button
+            on:click={() => handle_slider("back")}
+            aria-label="slider return"
+          >
+            <img
+              class="w-full h-[1rem]"
+              src="icon-angle-left.svg"
+              alt="slider return icon"
+            />
+          </button>
+          <button
+            on:click={() => handle_slider("onward")}
+            aria-label="slider forward"
+          >
+            <img
+              class="w-full h-[1rem]"
+              src="icon-angle-right.svg"
+              alt="slider forward icon"
+            />
+          </button>
+        </div>
       </div>
     </div>
   </section>
